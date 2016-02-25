@@ -3,6 +3,13 @@ from __future__ import unicode_literals
 from django.db import models
 from locations.models.city import City
 
+PLACES_TYPES = (
+    (u'Teatr', u'Teatr'),
+    (u'Muzeum', u'Muzeum'),
+    (u'Opera', u'Opera' ),
+    (u'Stadion', u'Stadion'),
+)
+
 
 class Place(models.Model):
 
@@ -14,4 +21,4 @@ class Place(models.Model):
     fb_page = models.URLField()
     open_close_info = models.TextField()
     description = models.TextField()
-
+    place_type = models.CharField(choices=PLACES_TYPES)
