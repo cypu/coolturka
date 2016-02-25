@@ -1,12 +1,13 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from locations.models.city import City
 
 
 class Place(models.Model):
 
     name = models.CharField(max_length=500)
-    #city = models.ForeignKey()
+    city = models.ForeignKey(City)
     latitude = models.DecimalField(u'latitude', blank=True, null=True, max_digits=6, decimal_places=4)
     longitude = models.DecimalField(u'longitude', blank=True, null=True, max_digits=6, decimal_places=4)
     home_page = models.URLField()
