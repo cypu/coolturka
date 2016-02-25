@@ -9,3 +9,6 @@ __pycache__
 
 # Ignore bower components.
 bower_components
+
+# database
+db.sqlite3
