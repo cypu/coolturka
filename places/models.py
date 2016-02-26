@@ -21,4 +21,4 @@ class Place(models.Model):
     fb_page = models.URLField()
     open_close_info = models.TextField()
     description = models.TextField()
-    place_type = models.CharField(choices=PLACES_TYPES)
+    place_type = models.CharField(max_length=100, choices=PLACES_TYPES)
