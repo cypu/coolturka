@@ -27,9 +27,9 @@ class WorkshopAdmin(admin.ModelAdmin):
     pass
 
 
-admin.register.site(Concert, ConcertAdmin)
-admin.register.site(Excibition, ExcibitionAdmin)
-admin.register.site(Metting, MettingAdmin)
-admin.register.site(Play, PlayAdmin)
-admin.register.site(Workshop, WorkshopAdmin)
+admin.site.register(Concert, ConcertAdmin)
+admin.site.register(Excibition, ExcibitionAdmin)
+admin.site.register(Metting, MettingAdmin)
+admin.site.register(Play, PlayAdmin)
+admin.site.register(Workshop, WorkshopAdmin)
 
