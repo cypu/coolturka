@@ -7,7 +7,7 @@ class Event(models.Model):
     additional_info = models.TextField(u'additional information related to event', max_length=2000)
     start_date = models.DateTimeField(u'start date')
     end_date = models.DateTimeField(u'end date')
-    buy_ticket_url = models.CharField(u'URL which allows to buy a ticket')
+    buy_ticket_url = models.CharField(u'URL which allows to buy a ticket', max_length=255)
     ticket_prices = models.TextField(u'ticket prices')
     descritpion = models.TextField(u'event descritpion')
     latitude = models.DecimalField(u'latitude', blank=True, null=True, max_digits=6, decimal_places=4)
