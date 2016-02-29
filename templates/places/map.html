@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} Pełna Coolturka | Mapa {% endblock %}
 {% block content %}
-    Mapa
+    {% for v in voivodeships %}
+        <p> {{ v }} </p>
+    {% endfor %}
 {% endblock %}
