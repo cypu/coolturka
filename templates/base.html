@@ -6,6 +6,8 @@
     <title>
         {% block title %} Pełna Coolturka {% endblock %}
     </title>
+
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="{% static 'css/locations/cssmap-poland/cssmap-poland.css' %}" />
 </head>
 <body>
 
@@ -13,7 +15,12 @@
 
 {% endblock %}
 
-    <script src="{% static 'bower_components/react/react.min.js' %}"></script>
+    <script src="{% static 'js/bower_components/react/react.min.js' %}"></script>
+    <script src="{% static 'js/bower_components/jquery/dist/jquery.min.js' %}"></script>
+
+{% block additional_js %}
+
+{% endblock %}
 
 </body>
 </html>

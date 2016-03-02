@@ -8,3 +8,6 @@ class City(models.Model):
     voivodeship = models.ForeignKey(Voivodeship)
     latitude = models.DecimalField(u'latitude', blank=True, null=True, max_digits=6, decimal_places=4)
     longitude = models.DecimalField(u'longitude', blank=True, null=True, max_digits=6, decimal_places=4)
+
+    def __unicode__(self):
+        return self.name

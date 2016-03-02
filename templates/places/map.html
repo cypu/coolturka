@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block title %} Pełna Coolturka | Mapa {% endblock %}
 {% block content %}
-    {% for v in voivodeships %}
-        <p> {{ v }} </p>
-    {% endfor %}
+
+    <div id="map-poland">
+     <ul class="poland">
+        {% for v in voivodeships %}
+            <li class="{{ v.class_name }}"><a href="{{ v.url }}">{{ v.name }}</a></li>
+        {% endfor %}
+     </ul>
+    </div>
+
+{% endblock %}
+
+{% block additional_js %}
+    <script type="text/javascript" src="{% static 'js/locations/jquery.cssmap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/locations/map.js' %}"></script>
 {% endblock %}
